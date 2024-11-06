@@ -24,7 +24,7 @@ This is a Laravel-based multivendor e-commerce platform that allows multiple ven
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/username/multivendor-ecommerce.git
+   git clone https://github.com/Ashar-khursheed/horeca.git
    cd multivendor-ecommerce
 Install Dependencies: Use Composer to install all required PHP dependencies:
 
