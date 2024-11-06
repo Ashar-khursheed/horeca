@@ -10,8 +10,6 @@ This is a Laravel-based multivendor e-commerce platform that allows multiple ven
 - **Order Management**: Complete order handling from cart to payment and delivery.
 - **Product Reviews**: Customers can leave reviews and ratings for products.
 
----
-
 ## Installation
 
 ### Prerequisites
@@ -22,89 +20,70 @@ This is a Laravel-based multivendor e-commerce platform that allows multiple ven
 
 ### Steps to Install
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Ashar-khursheed/horeca.git
-   cd multivendor-ecommerce
-Install Dependencies: Use Composer to install all required PHP dependencies:
+1. Clone the Repository:  
+   `git clone https://github.com/Ashar-khursheed/horeca.git
+   `cd multivendor-ecommerce`
 
-bash
-Copy code
-composer install
-Configure Environment Variables: Copy the .env.example file to .env:
+2. Install Dependencies:  
+   Use Composer to install all required PHP dependencies:  
+   `composer install`
 
-bash
-Copy code
-cp .env.example .env
-Open the .env file and configure the database, mail, and other necessary environment variables.
+3. Configure Environment Variables:  
+   Copy the `.env.example` file to `.env`:  
+   `cp .env.example .env`  
+   Open the `.env` file and configure the database, mail, and other necessary environment variables.
 
-Generate Application Key: Laravel requires an application key to be set for encryption. Run the following command to generate the key:
+4. Generate Application Key:  
+   Laravel requires an application key to be set for encryption. Run the following command to generate the key:  
+   `php artisan key:generate`
 
-bash
-Copy code
-php artisan key:generate
-Run Migrations: Apply the database migrations to create the necessary tables:
+5. Run Migrations:  
+   Apply the database migrations to create the necessary tables:  
+   `php artisan migrate`
 
-bash
-Copy code
-php artisan migrate
-Seed the Database (Optional): If you have seed data for products, users, etc., you can run the seeder:
+6. Seed the Database (Optional):  
+   If you have seed data for products, users, etc., you can run the seeder:  
+   `php artisan db:seed`
 
-bash
-Copy code
-php artisan db:seed
-Set Permissions: Ensure that the storage and bootstrap/cache directories are writable:
+7. Set Permissions:  
+   Ensure that the `storage` and `bootstrap/cache` directories are writable:  
+   `chmod -R 775 storage bootstrap/cache`
 
-bash
-Copy code
-chmod -R 775 storage bootstrap/cache
-Serve the Application: To run the application locally, use the following command:
+8. Serve the Application:  
+   To run the application locally, use the following command:  
+   `php artisan serve`  
+   This will serve the application at `http://localhost:8000` by default.
 
-bash
-Copy code
-php artisan serve
-This will serve the application at http://localhost:8000 by default.
+## Features & Admin Access
 
-Features & Admin Access
-Vendor Login: Vendors can register and log in to manage their own stores.
-Admin Login: Admin login credentials can be set manually in the database or through php artisan tinker for initial setup.
-Role Management: Admin can assign and manage roles (admin, vendor, customer).
-Common Artisan Commands
-Migrate the Database:
+- **Vendor Login**: Vendors can register and log in to manage their own stores.
+- **Admin Login**: Admin login credentials can be set manually in the database or through `php artisan tinker` for initial setup.
+- **Role Management**: Admin can assign and manage roles (admin, vendor, customer).
 
-bash
-Copy code
-php artisan migrate
-Seed the Database:
+## Common Artisan Commands
 
-bash
-Copy code
-php artisan db:seed
-Clear Cache:
+- Migrate the Database:  
+  `php artisan migrate`
 
-bash
-Copy code
-php artisan cache:clear
-Create a New Controller:
+- Seed the Database:  
+  `php artisan db:seed`
 
-bash
-Copy code
-php artisan make:controller VendorController
-Run the Queue (if using Laravel queues):
+- Clear Cache:  
+  `php artisan cache:clear`
 
-bash
-Copy code
-php artisan queue:work
-Troubleshooting
-Storage Permissions: If you encounter any issues related to file uploads or storage, make sure the storage folder is writable.
+- Create a New Controller:  
+  `php artisan make:controller VendorController`
 
-bash
-Copy code
-chmod -R 775 storage
-Mail Configuration: Ensure your .env file has the correct SMTP or mail driver settings to send order confirmations, vendor notifications, etc.
+- Run the Queue (if using Laravel queues):  
+  `php artisan queue:work`
 
-Contributing
+## Troubleshooting
+
+- **Storage Permissions**: If you encounter any issues related to file uploads or storage, make sure the `storage` folder is writable.  
+  `chmod -R 775 storage`
+
+- **Mail Configuration**: Ensure your `.env` file has the correct SMTP or mail driver settings to send order confirmations, vendor notifications, etc.
+
+## Contributing
+
 Feel free to fork this repository and submit pull requests. Please ensure your changes are well-tested and documented.
-
-
-This is a fully structured `README.md` file that should serve as the documentation for your Laravel multivendor e-commerce system, including setup, common commands, and troubleshooting tips. Just replace the placeholder (like `username/multivendor-ecommerce`) with your actual GitHub repository link and any other relevant details.
