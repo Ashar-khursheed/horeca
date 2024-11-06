@@ -1,0 +1,13 @@
+
+/vendor
+/bootstrap
+# /config
+# /database
+# /lang
+/platform
+/public
+/resources
+# routes
+/storage
+/tests
+
