@@ -4,7 +4,7 @@
 # /config
 # /database
 # /lang
-/platform/core
+# /platform/core
 /public
 # /resources
 # routes
