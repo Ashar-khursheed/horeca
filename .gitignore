@@ -1,6 +1,6 @@
 
 /vendor
-/bootstrap
+#bootstrap
 # /config
 # /database
 # /lang
